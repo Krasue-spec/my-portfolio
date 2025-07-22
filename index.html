@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel C. Hinayas | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #161616;
+            color: #fff;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #464545;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #00adb5;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header h2 {
+            font-size: 1.2rem;
+            color: #00adb5;
+        }
+        nav {
+            background: #474646;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00adb5;
+        }
+        section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-in-out;
+        }
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        section h3 {
+            margin-bottom: 15px;
+            color: #00adb5;
+            font-size: 1.8rem;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        .projects .card {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .contact a {
+            color: #00adb5;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1f1f1f;
+            color: #777;
+        }
+        @media(max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="emman1.jpg" alt="Emmanuel Hinayas">
+        <h1>Emmanuel C. Hinayas</h1>
+        <h2>Student</h2>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h3>About Me</h3>
+        <p>I am flexible, reliable and possess excellent time keeping skills. I am an enthusiastic, self-motivated, reliable, responsible and hard working person.
+            I'm a hardworking student who strives to improve every day. </p>
+    </section>
+
+    <section id="skills">
+        <h3>Skills</h3>
+        <ul>
+            
+            <li><i class="fas fa-lightbulb"></i> Problem-solving</li>
+            <li><i class="fas fa-user-check"></i> Adaptability</li>
+            <li><i class="fas fa-brain"></i> Quick Learner</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h3>Projects</h3>
+        <div class="card">
+            <h4>Personal Portfolio Website</h4>
+            <p>A responsive portfolio built using HTML and CSS.</p>
+        </div>
+       
+    </section>
+
+
+    <section id="contact" class="contact">
+        <h3>Contact</h3>
+        <div class="card">
+        <p>Email: <a href="mailto:emmanxdhinayas@gmail.com">Emmanxdhinayas@gmail.com</a></p>
+        <p>Address: Day-as, Cordova, Cebu</p>
+        <p>Location: Philippines</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Emmanuel Hinayas | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Fade-in animation on scroll
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            const triggerBottom = window.innerHeight / 1.3;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
